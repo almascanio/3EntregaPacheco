@@ -8,8 +8,8 @@ let mensaje = document.querySelector("#mensaje");
 let ganaPunto = document.querySelector("#gana-punto");
 let eligeTuAtaque = document.querySelector("#elige-tu-ataque");
 
-let eleccionJugador = document.querySelector("#eleccion-jugador");
-let eleccionEnemigo = document.querySelector("#eleccion-enemigo");
+let mensajeEleccionJugador = document.querySelector("#eleccion-jugador");
+let mensajeEleccionEnemigo = document.querySelector("#eleccion-enemigo");
 
 let empezarDeNuevo = document.querySelector('#reiniciar')
 
@@ -22,6 +22,7 @@ function iniciarJuego(evento) {
 
     let eleccionEnemigo = Math.floor(Math.random() * 3);
     let eleccionJugador = evento.currentTarget.id;
+
 
     // piedra => 0
     // papel => 1
@@ -57,8 +58,8 @@ function iniciarJuego(evento) {
     }
 
     mensaje.classList.remove("disabled");
-    eleccionJugador.innerText = eleccionJugador;
-    eleccionEnemigo.innerText = eleccionEnemigo;
+    mensajeEleccionJugador.innerText = eleccionJugador;
+    mensajeEleccionEnemigo.innerText = eleccionEnemigo;
 
     if (puntosJugador === 3 || puntosEnemigo === 3) {
 
